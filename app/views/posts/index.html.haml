@@ -1,0 +1,7 @@
+.list-group
+  - @posts.each do |post|
+    %a.list-group-item{:href => "#{post_path(post)}"}
+      %h4.list-group-item-heading= post.title
+      %p.list-group-item-text by #{post.user.user_name}
+      %br
+      %p.list-group-item-text= truncate(post.body, length: 250, seperator: ' ')

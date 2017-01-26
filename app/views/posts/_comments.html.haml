@@ -1,0 +1,9 @@
+.page-header
+  %h4 Comments
+.panel.panel-default
+  - @comments.each do |comment|
+    .panel-heading= comment.user.user_name
+    .panel-body
+      %p= comment.body
+      %p commented on #{time_ago_in_words(comment.updated_at)} ago
+= render 'new_comment'

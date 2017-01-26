@@ -1,0 +1,13 @@
+.panel.panel-default.devise-bs
+  .panel-heading
+    %h4 Add a Post
+  .panel-body
+    = form_for @post, :html => { role: 'form' } do |f|
+      .form-group
+        = f.label :title, "Title:", class: "control-label"
+        = f.text_field :title, class: "form-control"
+      .form-group
+        = f.label :body, "Body:", class: "control-label"
+        = f.text_area :body, class: "form-control post-body"
+      = f.submit "Publish", class: 'btn btn-default btn-primary'
+      

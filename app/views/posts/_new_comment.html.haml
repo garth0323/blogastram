@@ -1,0 +1,9 @@
+.panel.panel-default.devise-bs
+  .panel-heading
+    %h4 Add a Comment
+  .panel-body
+    = form_for @comment, url: create_comment_post_path, :html => { role: 'form' } do |f|
+      .form-group
+        = f.label :body, "Body:", class: "control-label"
+        = f.text_area :body, class: "form-control post-body"
+      = f.submit "Publish", class: 'btn btn-default btn-primary'
