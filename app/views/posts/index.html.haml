@@ -5,3 +5,4 @@
       %p.list-group-item-text by #{post.user.user_name}
       %br
       %p.list-group-item-text= truncate(post.body, length: 250, seperator: ' ')
+= paginate @posts, :theme => 'twitter-bootstrap-3'

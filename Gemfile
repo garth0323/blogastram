@@ -33,6 +33,8 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'devise-bootstrap-views'
 gem 'haml'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
@@ -42,6 +44,11 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'shoulda-matchers'
+  gem 'faker'
 end
 
 group :development do
