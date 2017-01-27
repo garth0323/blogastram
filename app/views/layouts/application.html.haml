@@ -9,7 +9,6 @@
   %body
     = render 'layouts/nav'
     .container
-      %p.notice= notice
-      %p.alert= alert
+      = flash_messages
       = yield
       
