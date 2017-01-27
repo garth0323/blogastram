@@ -6,6 +6,11 @@ Rails.application.routes.draw do
   		post 'create_comment'
   	end
   end
-	root to: 'posts#index'
+  authenticated :user do
+	  root 'posts#index', as: :authenticated_root
+	end
+	unauthenticated :user do
+	  root 'pages#landing', as: :unauthenticated_root
+	end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
