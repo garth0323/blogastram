@@ -3,7 +3,7 @@ require 'rails_helper'
 describe 'posts' do
   describe 'not logged in' do
     it 'cannot create a post if not logged in' do
-      visit root_path
+      visit unauthenticated_root_path
       expect(page).to have_content("Sign In")
       expect(page).not_to have_content("New Post")
 
